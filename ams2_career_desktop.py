@@ -7,6 +7,7 @@ import random
 import openpyxl
 import ctypes
 import sys
+import subprocess
 
 try:
     # Forces Windows taskbar to treat this as its own unique application
@@ -295,6 +296,9 @@ class AMS2CareerApp(tk.Tk):
         # FULL UNCLIPPED FILENAME DISPLAY LABEL (TOOLTIP / LABEL)
         self.bp_file_lbl = tk.Label(bp_bar, text="Active File: None", font=("Helvetica", 9, "italic"), bg="#1e293b", fg="#38bdf8")
         self.bp_file_lbl.pack(side=tk.LEFT, padx=15)
+
+        # MANAGE LIBRARY BUTTON (ALIGNED RIGHT)
+        tk.Button(bp_bar, text="Manage Library", command=self.open_blueprints_folder, bg="#334155", fg="white", font=("Helvetica", 8, "bold"), padx=10, relief=tk.FLAT).pack(side=tk.RIGHT, padx=5)
         
         self.status_lbl = tk.Label(frame, text="Blueprint Status: Not Loaded", font=("Helvetica", 9, "bold"), bg="#090d16", fg="#ef4444")
         self.status_lbl.pack(anchor="w", pady=(2, 10))
@@ -325,8 +329,54 @@ class AMS2CareerApp(tk.Tk):
         action_frame = tk.Frame(frame, bg="#090d16", pady=15)
         action_frame.pack(fill=tk.X)
         tk.Button(action_frame, text="Load Selected Career", command=self.load_selected_career, bg="#059669", fg="white", font=("Helvetica", 10, "bold"), padx=20, pady=8, relief=tk.FLAT).pack(side=tk.LEFT)
+        tk.Button(action_frame, text="Delete Selected Career", command=self.delete_selected_career, bg="#dc2626", fg="white", font=("Helvetica", 10, "bold"), padx=20, pady=8, relief=tk.FLAT).pack(side=tk.RIGHT)
 
         self.refresh_blueprint_library()
+
+    def open_blueprints_folder(self):
+        if not os.path.exists(BLUEPRINTS_DIR):
+            os.makedirs(BLUEPRINTS_DIR, exist_ok=True)
+        try:
+            if sys.platform == "win32":
+                os.startfile(BLUEPRINTS_DIR)
+            elif sys.platform == "darwin":
+                subprocess.Popen(["open", BLUEPRINTS_DIR])
+            else:
+                subprocess.Popen(["xdg-open", BLUEPRINTS_DIR])
+        except Exception as e:
+            messagebox.showerror("Error Opening Directory", f"Could not open blueprints folder:\n{e}")
+
+    def delete_selected_career(self):
+        sel = self.tree.selection()
+        if not sel:
+            messagebox.showwarning("Selection Required", "Please select a career profile to delete.")
+            return
+
+        career_id = sel[0]
+        item_vals = self.tree.item(career_id, 'values')
+        driver_name = item_vals[0] if item_vals else "this profile"
+
+        confirm = messagebox.askyesno(
+            "Confirm Deletion",
+            f"Are you sure you want to permanently delete the career profile for '{driver_name}'?\n\nThis action cannot be undone.",
+            icon='warning'
+        )
+
+        if confirm:
+            try:
+                conn = sqlite3.connect(DB_FILE)
+                c = conn.cursor()
+                c.execute("DELETE FROM careers WHERE id = ?", (career_id,))
+                conn.commit()
+                conn.close()
+
+                if self.active_profile and self.active_profile.get('id') == career_id:
+                    self.active_profile = None
+
+                self.load_profiles_list()
+                messagebox.showinfo("Deleted", f"Career profile for '{driver_name}' has been deleted.")
+            except Exception as e:
+                messagebox.showerror("Error Deleting Profile", f"Could not delete career profile:\n{e}")
 
     def import_blueprint_file(self):
         f_path = filedialog.askopenfilename(filetypes=[("Excel Files", "*.xlsx")])
