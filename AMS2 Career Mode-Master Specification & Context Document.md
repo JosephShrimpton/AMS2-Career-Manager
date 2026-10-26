@@ -1,4 +1,4 @@
-# Automobilista 2 Career Manager Desktop — Master Technical Specification & Architecture Manual
+# Automobilista 2 Career Manager — Master Technical Specification & Architecture Manual
 
 ## 1. Executive Summary & Vision
 
