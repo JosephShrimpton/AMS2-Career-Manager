@@ -4,6 +4,10 @@ A lightweight, robust, and standalone desktop application designed to bring stru
 
 Built with Python and Tkinter, this tool acts as a dedicated career engine that loads external Excel race blueprints, logs contract earnings, tracks multi-season standings, and securely persists your career save states.
 
+<img width="1262" height="812" alt="image" src="https://github.com/user-attachments/assets/e6458534-65b1-47f8-b688-b7f0ee01e717" />
+
+<img width="1262" height="812" alt="image" src="https://github.com/user-attachments/assets/7f9afd45-6f95-4bc8-ba7a-549e676298f1" />
+
 ## Key Features
 
 * **Slate Dark UI**: Clean, eye-friendly custom theme optimized for extended gaming sessions.
