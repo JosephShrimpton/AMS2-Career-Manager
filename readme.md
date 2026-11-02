@@ -4,11 +4,11 @@ A lightweight, robust, and standalone desktop application designed to bring stru
 
 ## Version 2.0 (Telemetry & Second Monitor XML Integration)
 
-<img width="1282" height="852" alt="image" src="https://github.com/user-attachments/assets/e33f6fc5-6f86-4c06-82c1-f35ef724e399" />
+<img width="1282" height="852" alt="image" src="https://github.com/user-attachments/assets/c4a5cda6-e366-4fa3-94b1-b2293f052bb8" />
 
 <img width="1282" height="852" alt="image" src="https://github.com/user-attachments/assets/0c63d488-1ba1-4906-a173-38275b8b277e" />
 
-<img width="1282" height="852" alt="image" src="https://github.com/user-attachments/assets/c4a5cda6-e366-4fa3-94b1-b2293f052bb8" />
+<img width="1282" height="852" alt="image" src="https://github.com/user-attachments/assets/e33f6fc5-6f86-4c06-82c1-f35ef724e399" />
 
 Version 2.0 transforms AMS2 Career Manager into an automated, telemetry-integrated career engine. While retaining complete manual fallback entry, v2 connects directly with **Second Monitor** XML data exports for live standings synchronization, automated qualifying position detection, dynamic multi-class scoring calculations, persistent round overrides, and algorithmic career contract offers via the Trajectory Index (TI).
 
