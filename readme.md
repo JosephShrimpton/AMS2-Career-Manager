@@ -10,9 +10,9 @@ A lightweight, robust, and standalone desktop application designed to bring stru
 
 <img width="1282" height="852" alt="image" src="https://github.com/user-attachments/assets/e33f6fc5-6f86-4c06-82c1-f35ef724e399" />
 
-Version 2.0 transforms AMS2 Career Manager into an automated, telemetry-integrated career engine. While retaining complete manual fallback entry, v2 connects directly with **Second Monitor** XML data exports for live standings synchronization, automated qualifying position detection, dynamic multi-class scoring calculations, persistent round overrides, and algorithmic career contract offers via the Trajectory Index (TI).
+Version 2.1 transforms AMS2 Career Manager into an automated, telemetry-integrated career engine. While retaining complete manual fallback entry, v2 connects directly with **Second Monitor** XML data exports for live standings synchronization, automated qualifying position detection, dynamic multi-class scoring calculations, persistent round overrides, and algorithmic career contract offers via the Trajectory Index (TI).
 
-### New Key Features in v2.0
+### New Key Features in v2.1
 
 * **Direct Second Monitor XML Integration**: Live parsing of `Championships.xml` exports from Second Monitor to track real-time series standings and round classifications.
 
