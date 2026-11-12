@@ -4,11 +4,17 @@ A lightweight, robust, and standalone desktop application designed to bring stru
 
 ## Version 2.3 (Advanced TI System, In-App Blueprint Editor & Second Monitor XML Integration)
 
-<img width="1282" height="852" alt="image" src="https://github.com/user-attachments/assets/c4a5cda6-e366-4fa3-94b1-b2293f052bb8" />
+<img width="1282" height="852" alt="image" src="https://github.com/user-attachments/assets/43f98735-07ab-428b-9e34-1fc860bdf93c" />
 
-<img width="1282" height="852" alt="image" src="https://github.com/user-attachments/assets/0c63d488-1ba1-4906-a173-38275b8b277e" />
+<img width="1282" height="852" alt="image" src="https://github.com/user-attachments/assets/d90b4bb0-31c9-4839-88ed-fe3e35798476" />
 
-<img width="1282" height="852" alt="image" src="https://github.com/user-attachments/assets/e33f6fc5-6f86-4c06-82c1-f35ef724e399" />
+<img width="1282" height="852" alt="image" src="https://github.com/user-attachments/assets/77017b3b-3d23-4719-a333-028f4eee62c7" />
+
+<img width="982" height="712" alt="image" src="https://github.com/user-attachments/assets/d0f49fcc-ce84-43f3-9957-f71a48836e72" />
+
+<img width="542" height="652" alt="image" src="https://github.com/user-attachments/assets/93200bd8-519f-4315-8084-4717bebef8c6" />
+
+<img width="982" height="712" alt="image" src="https://github.com/user-attachments/assets/5071fa38-7088-4bed-a43b-6f23d4403f33" />
 
 Version 2.3 transforms AMS2 Career Manager into an exhaustive, automated, telemetry-integrated career engine and blueprint authoring suite. While retaining complete manual fallback entry, v2.3 connects directly with **Second Monitor** XML data exports for live standings synchronization, automated qualifying position detection, dynamic multi-class scoring calculations, persistent round overrides, and algorithmic career contract offers via an upgraded **Advanced Non-Linear Trajectory Index (TI)** engine, alongside a built-in **Blueprint Creator & Editor**.
 
